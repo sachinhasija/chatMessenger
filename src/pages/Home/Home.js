@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import "./Home.css";
-import images from "../../Assests/projectImages";
 import { Link } from "react-router-dom";
 
 class Home extends Component {

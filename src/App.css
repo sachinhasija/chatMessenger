@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "AppMain";
+  src: local("AppMain"),
+    url(./Assests/fonts/Roboto-Regular.ttf) format("truetype"), local("AppMain"),
+    url(./Assests/fonts/Roboto-Bold.ttf) format("truetype"), local("AppMain"),
+    url(./Assests/fonts/Roboto-Black.ttf) format("truetype");
+}
+
+* {
+  font-family: "AppMain";
+}
 button:active {
   opacity: 0.5;
 }

@@ -15,7 +15,7 @@
 }
 
 .image {
-  background-image: url(../../images/back.jpg);
+  background-image: url(../../Assests/projectImages.js);
   background-repeat: no-repeat;
 
   background-size: cover;
@@ -79,7 +79,7 @@
   opacity: 1;
   right: 0;
 }
-.CenterAliningItems {
+.centerAligningItems {
   align-items: center;
   display: flex;
   justify-content: center;

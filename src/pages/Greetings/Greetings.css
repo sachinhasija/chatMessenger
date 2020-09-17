@@ -19,7 +19,7 @@
   color: #203152;
 }
 
-.textDesciptionWelcome {
+.textDescriptionWelcome {
   font-size: 20px;
   color: #203152;
   margin-bottom: 200px;
@@ -32,5 +32,5 @@
   margin-top: 20px;
   margin-bottom: 20px;
   object-fit: cover;
-  background-image: url(../../images/nopic.jpg);
+  background-image: url(../../Assests/noimg.jpg);
 }

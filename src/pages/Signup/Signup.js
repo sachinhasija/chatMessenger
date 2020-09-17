@@ -5,9 +5,10 @@ import { Card } from "react-bootstrap";
 import firebase from "../../services/firebase";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import LoginString from "../Login/Loginstring";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 export default class Signup extends Component {
   constructor() {
@@ -38,13 +39,14 @@ export default class Signup extends Component {
             .add({
               name,
               id: result.user.uid,
+              description: "",
               email,
               password,
               URL: "",
               messages: [{ notificationId: "", number: 0 }],
             })
             .then((docRef) => {
-              localStorage.setItem(LoginString.id, result.user.uid);
+              localStorage.setItem(LoginString.ID, result.user.uid);
               localStorage.setItem(LoginString.Name, name);
               localStorage.setItem(LoginString.Email, email);
               localStorage.setItem(LoginString.Password, password);
@@ -61,8 +63,15 @@ export default class Signup extends Component {
               this.props.history.push("/users");
             })
             .catch((error) => {
-              console.log("Error adding document", error);
+              document.getElementById("1").innerText = error.message
+                ? error.message
+                : "Error in signing up, please try again.";
             });
+        })
+        .catch((error) => {
+          document.getElementById("1").innerText = error.message
+            ? error.message
+            : "Error in signing up, please try again.";
         });
     } catch (err) {
       document.getElementById("1").innerHTML =
@@ -95,7 +104,7 @@ export default class Signup extends Component {
           <div>
             <Link to="/">
               <button className="btn">
-                <i className="fa fa-home">Lets Chat</i>
+                <FontAwesomeIcon icon={faHome}>Lets Chat</FontAwesomeIcon>
               </button>
             </Link>
           </div>

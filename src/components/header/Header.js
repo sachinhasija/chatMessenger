@@ -7,9 +7,6 @@ function Header() {
     <header className="header-login-signup">
       <div className="header-limiter">
         <h1>
-          <a href="/">
-            Coding<span>Cafe</span>
-          </a>
           <nav>
             <Link to="/">Home</Link>
             <Link className="selected" to="/">
